@@ -3,7 +3,7 @@
 
 (1) $\mathbb{Q}$ において、 $\circ$ を $a\circ b=\frac{ab}{2}$ と定義する。
 
-(2) $S=\mathbb{R}\textbackslash{}\\{{-1}\\}$ において、 $\circ$ を $a\circ b=a+b+ab$ と定義する。
+(2) $S=\mathbb{R}\textbackslash{}\\{-1\\}$ において、 $\circ$ を $a\circ b=a+b+ab$ と定義する。
 
 (3) $G=\\{(a,b)\in\mathbb{R}^2|a\neq 0\\}=\mathbb{R}^{*}\times\mathbb{R}$ において、 $\circ$ を $(a,b)\circ(c,d) =(ac,bc+d)$ と定義する。
 
