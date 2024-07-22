@@ -1,4 +1,58 @@
 # ネットワーク基礎概念
+## 用語集
+- DNS (Domain Name System)：ホスト名とIPアドレスの対応付けを行う
+- FQDN (Fully Qualified Domain Name)：完全修飾ドメイン名
+- NIC (Network Interface Card)
+- MAC (Media Access Control)
+- PCI (Protocol Control Information)
+- ICI (Interface Control Information)
+- SDU (Service Data Unit)：積み荷だけ
+- PDU (Protocol Data Unit)：積み荷＋木簡
+- UDP (User Datagram Protocol)：コネクション取らずに送り付ける。軽い。Broadcast
+- TCP (Transmission Control Protocol)：コネクション取る。信頼性。１対１
+- HTTP (Hypertext Transfer Protocol)
+- SSL/TLS (Secure Sockets Layer/Transport Layer Security)：公開鍵暗号系利用。改竄検出
+- PKI (Public Key Infrastructure)：公開鍵基盤、証明書の正しさをCAが保証
+- CA (Certificate Authority)：公開鍵証明書の認証局
+- DV (Domain Validation)：ドメイン認証
+- A, AAAA：FQDN → IPアドレス
+- CNAME (Canonical NAME)：ホストの別名を登録FQDN → FQDN
+- MX：メールドメイン → メールサーバー
+- CDN (Content Delivery Network)：Webコンテンツを世界に配信するネットワーク
+- ALOHA：競合形MAC、自己中送信
+- CSMA (Carrier Sense Multiple Access)：競合形MAC、空気読み送信
+- CSMA/CD (Collision Detection)：送受信を同時にするので、衝突を検出できる
+- CSMA/CA (Collision Avoidance)：衝突を検出できない
+- FEC (Forward Error Correction)：前方誤り訂正、受信側が直しちゃう
+- ARQ (Automatic Repeat reQuest)：自動再送要求、データリンク層・トランスポート層
+- Stop and Wait ARQ：１つずつ確認しつつ送る
+- Go-back-N ARQ：まとめて送り、失敗したところからやり直す
+- 選択的再送ARQ：まとめて送り、失敗したのだけやり直す
+- ACK (Acknowledgement)：成功
+- NAK (Negative Acknowledgement)：失敗
+- ARP (Address Resolution Protocol)：アドレス関係を探索する
+- DHCP (Dynamic Host Configuration Protocol)：IPアドレスやDNSを自動割り当て
+- VCI (Virtual Channel Identifier)：Virtual Channel型の識別用
+- RIB (Routing Information Base)：経路作成のための情報
+- FIB (Forwarding Information Base)：ルータが経路決定に使う表
+- ICMP (Internet Control Message Protocol)：IPの補助メッセージ
+- ECN (Explicit Congestion Notification)：明示的な輻輳通知
+- AM (Amplitude Modulation)：振幅変調
+- PM (Phase Modulation)：位相変調
+- FM (Frequency Modulation)：周波数変調
+- ASK (Amplitude Shift Keying)：振幅シフトキー方式
+- APSK (Amplitude Phase Shift Keying)：多値変調方式の１つ
+- QAM (Quadrature Amplitude Modulation)：2bit/信号の4QAM、4bit/信号の16QAM
+- FDMA (Frequency Division Multiple Access)：周波数分割多元接続
+- TDMA (Time Division Multiple Access)：時分割多元接続
+- CDMA (Code Division Multiple Access)：符号分割多元接続
+- FDD (Frequency Division Duplex)：異なる周波数帯を利用した１伝送路の路双方向通信
+- TDD (Time Division Duplex)：異なる時間で１伝送路の双方向通信
+- FDM (Frequency Division Multiplexing)：周波数の多重化（１伝送路で複数の通信）
+- TDM (Time Division Multiplexing)
+- CDM (Code Division Multiplexing)
+- PN (Pseudo Noise)信号：直接拡散方式によるスペクトラム拡散、多元接続に使うノイズ
+
 
 ## IP アドレス
 
