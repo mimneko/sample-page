@@ -125,9 +125,13 @@ $\therefore$ 数学的帰納法により、すべての $g$ について $\chi(F
 $$\Sigma=aba^{-1}b^{-1}$$
 
 #### クラインの壺 $K=N_2$
-$$\Sigma=aba^{-1}b$$
-
-$$\Sigma=aabb$$
+$$
+\begin{aligned}
+\Sigma
+&= aba^{-1}b \\
+&= aabb
+\end{aligned}
+$$
 
 #### $F_2= T ＃ T$
 $$\Sigma=aba^{-1}b^{-1}cdc^{-1}d^{-1}$$
