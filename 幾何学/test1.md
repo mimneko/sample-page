@@ -48,7 +48,7 @@ $$
 
 $$
 \begin{aligned}
-\chi(T)
+\chi(S)
 &= 8-12+6 \\
 &= 2
 \end{aligned}
