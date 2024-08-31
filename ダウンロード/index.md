@@ -1,4 +1,6 @@
-# おためし
+---
+title: おためし
+---
 
 <div>
     <a href="a.txt" class="download-button" download>
