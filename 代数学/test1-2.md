@@ -8,7 +8,7 @@ $$ 2839 = 201 \times 14 + 25$$
 (2)  $129\equiv 21 \mod 1566$ 
 
 (3) 
-$`\begin{equation}
+ $`\begin{equation}
     \left\{ \,
     \begin{aligned}
         x &\equiv 1 \mod 11 \\
