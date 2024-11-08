@@ -5,30 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>漢字の成り立ちについての解説</title>
     <style>
-        /* ヘッダーの設定 */
-        header {
+
+        html, body {
+            font-family: "Yu Gothic Medium", "Noto Sans Japanese", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", "Helvetica Neue", Arial, sans-serif;
+            font-size: 44px;
+        }
+
+        /* ヘッダー・フッターの設定 */
+        header,
+        footer {
             position: fixed;
-            top: 0;
             left: 0;
             width: 100%;
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: .5rem;
             z-index: 1000;
         }
 
-        /* フッターの設定 */
+        header {
+            top: 0;
+        }
         footer {
-            position: fixed;
             bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            z-index: 1000;
+            display: none;
         }
 
         /* メインコンテンツの設定 */
@@ -36,6 +37,13 @@
             margin-top: 60px;  /* ヘッダーの高さ分余白を設定 */
             margin-bottom: 60px;  /* フッターの高さ分余白を設定 */
             padding: 1rem;
+        }
+
+        @media (min-width: 769px) {
+            main {
+                margin: 115px 0;    /* 仮の値。他の要素の値との兼ね合いで、動的になるように。ヘッダー・フッターの高さが不明 */
+                padding: 0 10vw;
+            }
         }
     </style>
 </head>
@@ -56,6 +64,13 @@
     <h2>2. 漢字の構造</h2>
     <p>漢字は、いくつかの基本構造を持っています。これらの構造に基づいて、さまざまな意味を表現することが可能です。以下に主要な構造を示します。</p>
     
+    <ul>
+        <li>象形文字</li>
+        <li>指事文字</li>
+        <li>会意文字</li>
+        <li>形声文字</li>
+    </ul>
+
     <h3>象形文字</h3>
     <p>象形文字は、物体の形を象った文字で、具体的な形状を描くことで意味を表します。たとえば、「山」は山の形を象ったもの、「木」は木の形を描いたものです。</p>
     
