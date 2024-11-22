@@ -41,12 +41,13 @@
             top: 3px;
         }
         header.ribbon-collapsed, footer.ribbon-collapsed {
-            height: 20px;
+            height: 40px;
             max-height: 20px;
         }
         header.ribbon-collapsed #header-content, 
         footer.ribbon-collapsed #footer-content {
             transform: translateY(-100%);
+            display: none;
         }
         main {
             flex-grow: 1;
@@ -99,6 +100,7 @@
     <footer class="ribbon">
         <div id="footer-content">
             <p>フッターの詳細な情報やコンテンツをここに配置できます。</p>
+            <button>ボタン</button>
         </div>
         <div class="ribbon-toggle">
             <i class="fa-solid fa-chevron-down toggle-icon"></i>
