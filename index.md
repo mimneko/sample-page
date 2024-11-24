@@ -2,16 +2,6 @@
 title: リンク集
 ---
 
-- [情報通信ネットワーク](情報通信ネットワーク/test1.md)
-- [道徳](道徳/test.md)
-- [幾何学](幾何学/test1.md)
-- [代数学1](代数学/test1-1.md)
-- [代数学2](代数学/test1-2.md)
-- [代数学3](代数学/test1-3.md)
-- [代数学4](代数学/test1-4.md)
-- [代数学5](代数学/test1-5.md)
-- [ダウンロード](ダウンロード/)
-
 <div class="folder-tree">
   <ul id="file-list"></ul>
 </div>
@@ -26,14 +16,6 @@ async function getFiles(path = '') {
     const response = await fetch(url);
     const data = await response.json();
     return data;
-}
-
-function createFileLink(file) {
-    const a = document.createElement('a');
-    a.href = `https://${owner}.github.io/${repo}/${file.path}`;
-    a.textContent = file.name;
-    a.target = '_blank';
-    return a;
 }
 
 function createFileLink(file) {
@@ -59,6 +41,10 @@ async function displayFiles(parentElement, path = '') {
         }
         const li = document.createElement('li');
         if (file.type === 'file') {
+            // `.md`または`.html`で終わらない場合、次に進む
+            if (!file.name.endsWith('.md') && !file.name.endsWith('.html')) {
+                continue; // 次のループへ進む
+            }
             li.appendChild(createFileLink(file));
         } else if (file.type === 'dir') {
             const details = document.createElement('details');
