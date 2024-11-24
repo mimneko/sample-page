@@ -36,6 +36,21 @@ function createFileLink(file) {
     return a;
 }
 
+function createFileLink(file) {
+    const a = document.createElement('a');
+    if (file.name.endsWith('.md')) {
+        // .mdファイルは.html形式に変換してリンク
+        const htmlName = file.name.replace(/\.md$/, '.html');
+        a.href = `https://${owner}.github.io/${repo}/${file.path.replace(file.name, htmlName)}`;
+    } else if (file.name.endsWith('.html')) {
+        // それ以外は通常のリンク
+        a.href = `https://${owner}.github.io/${repo}/${file.path}`;
+    }
+    a.textContent = file.name;
+    a.target = '_blank';
+    return a;
+}
+
 async function displayFiles(parentElement, path = '') {
     const files = await getFiles(path);
     for (const file of files) {
