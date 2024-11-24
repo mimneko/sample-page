@@ -1,1 +1,1 @@
-# simple-jekyll
+# sample-page
